@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'rutan';
+  src: url('./Ruttan.ttf');
+}
+*{
+  font-family: 'rutan', sans-serif;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #222;
+  background-size: cover;
+  background-position: center;
+  background-image: url('./patternpad.png');
+}
+body{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255,255,255,0.3);
+}
+body h1{
+  text-transform: capitalize;
+  position: relative;
+  user-select: none;
+  font-weight: 500;
+  font-size: 80px;
+  text-align: center;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+body h1::after{
+  content: attr(name-name);
+  position: absolute;
+  width: 100%;
+  top: 90px;
+  font-size: 25px;
+}
+
+body img{
+  width: 25em;
+  user-select: none;
+  pointer-events: none;
+  position: relative;
+}
